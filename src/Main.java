@@ -1,15 +1,20 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Random;
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        // Create a Random object called rnd.
+        Random rnd = new Random();
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        // Simulate rolling two dice [cite: 20, 21, 22]
+        int die1 = rnd.nextInt(6) + 1; // Generates a random int between 1 and 6 [cite: 19]
+        int die2 = rnd.nextInt(6) + 1; // Generates a random int between 1 and 6 [cite: 19]
+        int crapsRoll = die1 + die2;   // Gaussian range from 2 to 12 as in rolling two dice [cite: 22]
+
+        System.out.println("Die 1: " + die1);
+        System.out.println("Die 2: " + die2);
+        System.out.println("Sum: " + crapsRoll);
+
+
     }
 }
